@@ -18,12 +18,22 @@ export const GYM = {
 } as const
 
 export const NAV_LINKS = [
-  { label: 'About', href: '#about' },
   { label: 'Services', href: '#programs' },
-  { label: 'Training', href: '#training' },
-  { label: 'Community', href: '#community' },
-  { label: 'Schedule', href: '#schedule' },
+  { label: 'About', href: '#about' },
+  { label: 'Coaches', href: '#coaches' },
   { label: 'Contact', href: '#contact' },
+  { label: 'Merchandise', href: '#merchandise' },
+  { label: 'Login', href: '#login' },
+  { label: 'Cart (1)', href: '#cart' },
+] as const
+
+export const COACHES = [
+  { name: 'Charlie "The Fight monkey" Joseph', image: 'charlie-joseph' as const },
+  { name: 'Manuel "Diablo" Calderon', image: 'manuel-calderon' as const },
+  { name: 'Josh-Alexander Laud Bungalso', image: 'josh-bungalso' as const },
+  { name: 'Edgar', image: 'edgar' as const },
+  { name: 'Frank Castillo', image: 'frank-castillo' as const },
+  { name: 'Abel Gonzalez', image: null },
 ] as const
 
 export const PROGRAMS = [
