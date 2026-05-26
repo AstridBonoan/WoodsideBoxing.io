@@ -21,33 +21,33 @@ export function Training() {
           description="Heavy bags, rings, and a team that holds you accountable."
         />
 
-        <div className="mt-8 grid gap-4 lg:grid-cols-3">
-          <figure className="group relative overflow-hidden rounded-sm lg:col-span-2">
-            <div className="relative flex aspect-square max-h-[320px] w-full items-center justify-center bg-forest-dark/80 lg:aspect-auto lg:h-[300px]">
+        <div className="mt-8 flex flex-col gap-4 lg:flex-row lg:items-stretch">
+          <figure className="group relative mx-auto w-full max-w-[300px] shrink-0 overflow-hidden rounded-sm lg:mx-0">
+            <div className="relative aspect-square w-full">
               <img
                 src={IMAGES.sparringCompetition}
                 alt="Woodside Boxing Academy fighters sparring in competition"
-                className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/30 to-transparent" />
-              <figcaption className="absolute right-0 bottom-0 left-0 p-6">
-                <h3 className="font-display text-2xl font-semibold tracking-wide text-white uppercase">
+              <figcaption className="absolute right-0 bottom-0 left-0 p-5">
+                <h3 className="font-display text-xl font-semibold tracking-wide text-white uppercase sm:text-2xl">
                   Sparring & Competition
                 </h3>
-                <p className="mt-1 text-sm text-white/70">
+                <p className="mt-1 text-xs text-white/70 sm:text-sm">
                   Controlled rounds and USA Boxing–sanctioned matchups under experienced coaches.
                 </p>
               </figcaption>
             </div>
           </figure>
 
-          <figure className="group relative overflow-hidden rounded-sm">
-            <div className="relative aspect-[4/5] w-full lg:aspect-auto lg:h-[300px]">
+          <figure className="group relative min-h-[260px] w-full overflow-hidden rounded-sm sm:min-h-[300px] lg:min-h-0 lg:flex-1">
+            <div className="relative h-full min-h-[260px] w-full sm:min-h-[300px]">
               <img
                 src={IMAGES.exterior}
                 alt="Woodside Boxing Academy gym entrance"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/30 to-transparent" />
