@@ -8,23 +8,25 @@ const TRAINING_FOCUS = [
   { title: 'Technique Development', caption: 'Fundamentals drilled until instinct.' },
 ] as const
 
-const CARD_HEIGHT = 'h-[200px] sm:h-[220px] lg:h-[250px]'
-
 function PhotoCard({
   src,
   alt,
   title,
   description,
+  className = '',
   imageClassName = 'object-cover',
 }: {
   src: string
   alt: string
   title: string
   description: string
+  className?: string
   imageClassName?: string
 }) {
   return (
-    <figure className={`group relative ${CARD_HEIGHT} overflow-hidden rounded-sm`}>
+    <figure
+      className={`group relative h-[220px] overflow-hidden rounded-sm sm:h-[240px] lg:h-[260px] ${className}`}
+    >
       <img
         src={src}
         alt={alt}
@@ -53,8 +55,9 @@ export function Training() {
           description="Heavy bags, rings, and a team that holds you accountable."
         />
 
-        <div className="mt-8 mx-auto grid max-w-md gap-4 sm:max-w-xl sm:grid-cols-2 lg:w-fit lg:max-w-none lg:grid-cols-[250px_380px] lg:justify-center">
+        <div className="mt-8 grid gap-4 lg:grid-cols-3">
           <PhotoCard
+            className="lg:col-span-2"
             src={IMAGES.sparringCompetition}
             alt="Woodside Boxing Academy fighters sparring in competition"
             title="Sparring & Competition"
@@ -65,7 +68,7 @@ export function Training() {
             alt="Woodside Boxing Academy team celebrating together in the gym"
             title="Team Atmosphere"
             description="Our home in Flushing — no shortcuts."
-            imageClassName="object-cover object-[center_35%]"
+            imageClassName="object-cover object-[center_40%]"
           />
         </div>
 
