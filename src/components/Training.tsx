@@ -62,6 +62,7 @@ export function Training() {
             alt="Woodside Boxing Academy fighters sparring in competition"
             title="Sparring & Competition"
             description="Controlled rounds and USA Boxing–sanctioned matchups under experienced coaches."
+            imageClassName="object-cover object-[center_18%]"
           />
           <PhotoCard
             src={IMAGES.teamAtmosphere}
