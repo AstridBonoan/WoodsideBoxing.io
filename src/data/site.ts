@@ -23,9 +23,12 @@ export const NAV_LINKS = [
   { label: 'Coaches', href: '#coaches' },
   { label: 'Contact', href: '#contact' },
   { label: 'Merchandise', href: '#merchandise' },
-  { label: 'Login', href: '#login' },
-  { label: 'Cart (1)', href: '#cart' },
 ] as const
+
+export const NAV_ACTIONS = {
+  login: { href: '#login', label: 'Login' },
+  cart: { href: '#cart', label: 'Cart', count: 1 },
+} as const
 
 export const COACHES = [
   { name: 'Charlie "The Fight monkey" Joseph', image: 'charlie-joseph' as const },
