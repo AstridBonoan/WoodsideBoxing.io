@@ -13,7 +13,7 @@ export function Community() {
             <h2 className="font-display text-4xl font-bold tracking-tight text-white uppercase sm:text-5xl">
               Fighter Pathway
             </h2>
-            <div className="mt-2 h-1 w-16 bg-blood" />
+            <div className="mt-2 h-1 w-16 bg-forest-light" />
             <p className="mt-6 leading-relaxed text-white/70">
               Woodside Boxing Academy is where warriors are made. Our amateur fighter pathway takes dedicated athletes
               from fundamentals through USA Boxing–sanctioned competition — with coaches who invest in your development,
@@ -27,7 +27,7 @@ export function Community() {
               {VALUES.map((value) => (
                 <div
                   key={value.title}
-                  className="rounded-sm border border-white/10 bg-matte/50 p-4 transition-colors hover:border-blood/40"
+                  className="rounded-sm border border-forest/30 bg-matte/50 p-4 transition-colors hover:border-forest-light/50"
                 >
                   <h3 className="font-display text-lg font-semibold text-gold uppercase">{value.title}</h3>
                   <p className="mt-1 text-sm text-white/60">{value.desc}</p>
@@ -40,7 +40,7 @@ export function Community() {
             {TESTIMONIALS.map((t, i) => (
               <blockquote
                 key={i}
-                className="rounded-sm border-l-4 border-blood bg-matte p-6 transition-transform duration-300 hover:translate-x-1"
+                className="rounded-sm border-l-4 border-forest-light bg-matte p-6 transition-transform duration-300 hover:translate-x-1"
               >
                 <p className="text-lg leading-relaxed text-white/85 italic">&ldquo;{t.quote}&rdquo;</p>
                 <footer className="mt-4 text-sm font-medium tracking-wide text-steel uppercase">

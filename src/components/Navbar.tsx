@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { GYM, NAV_LINKS } from '../data/site'
+import { NAV_LINKS } from '../data/site'
+import { Logo } from './Logo'
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -22,17 +23,13 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'border-b border-white/10 bg-charcoal/95 backdrop-blur-md'
+          ? 'border-b border-forest/30 bg-forest-dark/95 backdrop-blur-md'
           : 'bg-transparent'
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <a
-          href="#"
-          className="font-display text-xl font-bold tracking-wider text-white uppercase"
-        >
-          <span className="text-blood">{GYM.shortName}</span>
-          <span className="hidden sm:inline"> — Boxing</span>
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="#" className="shrink-0">
+          <Logo size="sm" />
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -50,7 +47,7 @@ export function Navbar() {
 
         <a
           href="#contact"
-          className="hidden rounded-sm bg-blood px-5 py-2.5 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-blood-light md:inline-block"
+          className="hidden rounded-sm bg-forest px-5 py-2.5 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-forest-light md:inline-block"
         >
           Join the Gym
         </a>
@@ -78,7 +75,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-charcoal md:hidden">
+        <div className="border-t border-forest/30 bg-forest-dark md:hidden">
           <ul className="flex flex-col px-4 py-4">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
@@ -94,7 +91,7 @@ export function Navbar() {
             <li className="pt-2">
               <a
                 href="#contact"
-                className="block rounded-sm bg-blood py-3 text-center font-semibold text-white"
+                className="block rounded-sm bg-forest py-3 text-center font-semibold text-white"
                 onClick={() => setOpen(false)}
               >
                 Join the Gym

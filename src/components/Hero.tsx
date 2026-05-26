@@ -1,24 +1,26 @@
 import { GYM } from '../data/site'
-
-const HERO_IMAGE =
-  'https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=1920&q=85'
+import { IMAGES } from '../data/assets'
+import { Logo } from './Logo'
 
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${HERO_IMAGE})` }}
+        style={{ backgroundImage: `url(${IMAGES.sparring})` }}
         role="img"
-        aria-label="Boxers training in a boxing gym"
+        aria-label="Woodside Boxing Academy fighters competing in the ring"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/85 via-charcoal/75 to-charcoal" />
+      <div className="absolute inset-0 bg-gradient-to-b from-forest-dark/90 via-charcoal/80 to-charcoal" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-32 text-center sm:px-6 lg:px-8">
+        <div className="animate-fade-up mx-auto mb-8 flex justify-center">
+          <Logo size="lg" className="drop-shadow-lg" />
+        </div>
         <p className="animate-fade-up mb-4 font-display text-sm font-medium tracking-[0.3em] text-gold uppercase">
-          Queens, NY — Est. {GYM.founded}
+          Flushing, Queens — Founded {GYM.founded}
         </p>
-        <h1 className="animate-fade-up font-display text-5xl leading-tight font-bold tracking-tight text-white uppercase sm:text-6xl md:text-7xl lg:text-8xl">
+        <h1 className="animate-fade-up font-display text-4xl leading-tight font-bold tracking-tight text-white uppercase sm:text-5xl md:text-6xl lg:text-7xl">
           {GYM.tagline}
         </h1>
         <p
@@ -33,7 +35,7 @@ export function Hero() {
         >
           <a
             href="#contact"
-            className="min-h-[48px] min-w-[200px] rounded-sm bg-blood px-8 py-3.5 text-base font-semibold tracking-wide text-white transition-colors hover:bg-blood-light"
+            className="min-h-[48px] min-w-[200px] rounded-sm bg-forest px-8 py-3.5 text-base font-semibold tracking-wide text-white transition-colors hover:bg-forest-light"
           >
             Join the Gym
           </a>
@@ -41,7 +43,7 @@ export function Hero() {
             href="#programs"
             className="min-h-[48px] min-w-[200px] rounded-sm border border-white/30 px-8 py-3.5 text-base font-semibold tracking-wide text-white transition-colors hover:border-gold hover:text-gold"
           >
-            View Programs
+            View Services
           </a>
         </div>
       </div>
