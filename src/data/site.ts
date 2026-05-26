@@ -27,7 +27,7 @@ export const NAV_LINKS = [
 
 export const NAV_ACTIONS = {
   login: { href: '#login', label: 'Login' },
-  cart: { href: '#cart', label: 'Cart', count: 1 },
+  cart: { href: '#cart', label: 'Cart', count: 0 },
 } as const
 
 export const COACHES = [
@@ -36,7 +36,7 @@ export const COACHES = [
   { name: 'Josh-Alexander Laud Bungalso', image: 'josh-bungalso' as const },
   { name: 'Edgar', image: 'edgar' as const },
   { name: 'Frank Castillo', image: 'frank-castillo' as const },
-  { name: 'Abel Gonzalez', image: null },
+  { name: 'Abel Gonzalez', image: 'abel-gonzalez' as const },
 ] as const
 
 export const PROGRAMS = [
