@@ -8,7 +8,7 @@ const TRAINING_FOCUS = [
   { title: 'Technique Development', caption: 'Fundamentals drilled until instinct.' },
 ] as const
 
-const CARD_HEIGHT = 'h-[220px] sm:h-[250px] lg:h-[280px]'
+const CARD_HEIGHT = 'h-[200px] sm:h-[220px] lg:h-[250px]'
 
 function PhotoCard({
   src,
@@ -53,7 +53,7 @@ export function Training() {
           description="Heavy bags, rings, and a team that holds you accountable."
         />
 
-        <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,280px)_1fr]">
+        <div className="mt-8 mx-auto grid max-w-md gap-4 sm:max-w-xl sm:grid-cols-2 lg:w-fit lg:max-w-none lg:grid-cols-[250px_380px] lg:justify-center">
           <PhotoCard
             src={IMAGES.sparringCompetition}
             alt="Woodside Boxing Academy fighters sparring in competition"
