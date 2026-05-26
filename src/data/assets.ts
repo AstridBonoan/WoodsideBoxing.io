@@ -1,4 +1,5 @@
 const base = import.meta.env.BASE_URL
+const v = '?v=2'
 
 export const IMAGES = {
   logo: `${base}images/logo.png`,
@@ -11,11 +12,11 @@ export const IMAGES = {
     intro: `${base}images/intro-to-boxing.jpg`,
   },
   coaches: {
-    'charlie-joseph': `${base}images/coaches/charlie-joseph.png`,
-    'manuel-calderon': `${base}images/coaches/manuel-calderon.png`,
-    'josh-bungalso': `${base}images/coaches/josh-bungalso.png`,
-    edgar: `${base}images/coaches/edgar.png`,
-    'frank-castillo': `${base}images/coaches/frank-castillo.png`,
-    'abel-gonzalez': `${base}images/coaches/abel-gonzalez.png`,
+    'charlie-joseph': `${base}images/coaches/charlie-joseph.png${v}`,
+    'manuel-calderon': `${base}images/coaches/manuel-calderon.png${v}`,
+    'josh-bungalso': `${base}images/coaches/josh-bungalso.png${v}`,
+    edgar: `${base}images/coaches/edgar.png${v}`,
+    'frank-castillo-portrait': `${base}images/coaches/frank-castillo-portrait.png${v}`,
+    'abel-gonzalez': `${base}images/coaches/abel-gonzalez.png${v}`,
   },
 } as const

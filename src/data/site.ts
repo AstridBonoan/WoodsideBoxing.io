@@ -35,7 +35,7 @@ export const COACHES = [
   { name: 'Manuel "Diablo" Calderon', image: 'manuel-calderon' as const },
   { name: 'Josh-Alexander Laud Bungalso', image: 'josh-bungalso' as const },
   { name: 'Edgar', image: 'edgar' as const },
-  { name: 'Frank Castillo', image: 'frank-castillo' as const },
+  { name: 'Frank Castillo', image: 'frank-castillo-portrait' as const },
   { name: 'Abel Gonzalez', image: 'abel-gonzalez' as const },
 ] as const
 
