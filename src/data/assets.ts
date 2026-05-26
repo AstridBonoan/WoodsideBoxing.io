@@ -4,6 +4,7 @@ const v = '?v=2'
 export const IMAGES = {
   logo: `${base}images/logo.png`,
   sparring: `${base}images/sparring.jpg`,
+  sparringCompetition: `${base}images/sparring-competition.png`,
   exterior: `${base}images/gym-exterior.jpg`,
   introToBoxing: `${base}images/intro-to-boxing.jpg?v=2`,
   membership: {

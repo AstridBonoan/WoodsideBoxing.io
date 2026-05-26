@@ -23,11 +23,11 @@ export function Training() {
 
         <div className="mt-8 grid gap-4 lg:grid-cols-3">
           <figure className="group relative overflow-hidden rounded-sm lg:col-span-2">
-            <div className="relative aspect-[16/10] w-full lg:aspect-auto lg:h-[300px]">
+            <div className="relative flex aspect-square max-h-[320px] w-full items-center justify-center bg-forest-dark/80 lg:aspect-auto lg:h-[300px]">
               <img
-                src={IMAGES.sparring}
+                src={IMAGES.sparringCompetition}
                 alt="Woodside Boxing Academy fighters sparring in competition"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/30 to-transparent" />
