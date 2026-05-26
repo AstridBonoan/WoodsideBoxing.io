@@ -42,30 +42,47 @@ export const COACHES = [
 export const PROGRAMS = [
   {
     id: 'basic',
-    title: 'Basic Service',
+    title: 'Basic Membership',
     description:
-      'Monthly access to the gym facility and equipment. Members train during regular gym hours at their own pace. Ideal for those who want to work independently without guided coaching.',
-    price: 'From $75',
-    period: '/ month',
+      'Use our full gym facility at normal gym hours. Join in group sessions.',
+    summary:
+      'Our Basic Membership provides monthly access to the gym facility and equipment. Members are free to train during regular gym hours at their own pace. This plan is ideal for those who want to work independently without guided coaching.',
+    price: '$100.00',
+    period: 'Every month',
     featured: false,
+    image: 'logo' as const,
+    features: ['Access to video content', 'Unlimited monthly access'],
   },
   {
     id: 'amateur',
     title: 'Amateur Fighter Membership',
     description:
-      'Monthly access to the full gym, equipment, and group training with other fighters. Train in a supportive team environment with opportunities to compete in official USA Boxing–sanctioned matchups.',
-    price: 'Contact',
-    period: 'for pricing',
+      'Full access to the gym training facility during gym hours. Sparring training, drills, and actual sparring in the gym.',
+    summary:
+      'The Amateur Fighter Membership offers monthly access to the full gym facility, equipment, and group training sessions with other fighters. Members train in a supportive team environment and gain the opportunity to compete in official USA Boxing–sanctioned matchups.',
+    price: '$150.00',
+    period: 'Every month',
     featured: true,
+    image: 'sparring' as const,
+    features: [
+      'Video Contents',
+      'Unlimited monthly access',
+      'Gym Events',
+      'Assistance in registering for USA Boxing Amateur bouts',
+    ],
   },
   {
-    id: 'coaching',
-    title: 'Personal Coaching Service',
+    id: 'intro',
+    title: 'Intro to Boxing',
     description:
-      'One-on-one training with a dedicated coach. Personalized instruction, guidance, and preparation for USA Boxing–sanctioned matches for those seeking tailored support.',
-    price: 'From $35',
-    period: '/ session',
+      'Get a full month of hands-on guidance from our trainers. Learn how to use the equipment, build a routine, and master the basics so you can confidently train on your own after the program ends.',
+    summary:
+      'This one-month program is designed for beginners or anyone who wants to gain the confidence to train independently. Over the course of the month, all of our professionally experienced Coaches and Trainers will guide you step-by-step through the fundamentals—how to properly use the gym\'s equipment, build a solid workout routine, and practice essential boxing techniques safely and effectively.',
+    price: '$600.00',
+    period: 'One time',
     featured: false,
+    image: 'intro' as const,
+    features: ['Get a coach', 'Unlimited sessions for the month'],
   },
 ] as const
 

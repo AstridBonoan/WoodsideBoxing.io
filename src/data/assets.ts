@@ -4,6 +4,12 @@ export const IMAGES = {
   logo: `${base}images/logo.png`,
   sparring: `${base}images/sparring.jpg`,
   exterior: `${base}images/gym-exterior.jpg`,
+  introToBoxing: `${base}images/intro-to-boxing.jpg`,
+  membership: {
+    logo: `${base}images/logo.png`,
+    sparring: `${base}images/sparring.jpg`,
+    intro: `${base}images/intro-to-boxing.jpg`,
+  },
   coaches: {
     'charlie-joseph': `${base}images/coaches/charlie-joseph.png`,
     'manuel-calderon': `${base}images/coaches/manuel-calderon.png`,
