@@ -5,11 +5,11 @@ export const IMAGES = {
   logo: `${base}images/logo.png`,
   sparring: `${base}images/sparring.jpg`,
   exterior: `${base}images/gym-exterior.jpg`,
-  introToBoxing: `${base}images/intro-to-boxing.jpg`,
+  introToBoxing: `${base}images/intro-to-boxing.jpg?v=2`,
   membership: {
     logo: `${base}images/logo.png`,
-    sparring: `${base}images/amateur-fighter.jpg`,
-    intro: `${base}images/intro-to-boxing.jpg`,
+    sparring: `${base}images/amateur-fighter.jpg?v=2`,
+    intro: `${base}images/intro-to-boxing.jpg?v=2`,
   },
   coaches: {
     'charlie-joseph': `${base}images/coaches/charlie-joseph.png${v}`,
