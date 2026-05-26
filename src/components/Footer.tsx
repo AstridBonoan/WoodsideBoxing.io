@@ -24,14 +24,6 @@ export function Footer() {
             <p className="mt-3 max-w-xs text-sm text-white/50">
               {GYM.name} — Flushing, Queens. Founded {GYM.founded}.
             </p>
-            <a
-              href={GYM.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-block text-sm text-gold/80 transition-colors hover:text-gold"
-            >
-              woodsideboxingacademy.com
-            </a>
           </div>
 
           <nav aria-label="Footer navigation">

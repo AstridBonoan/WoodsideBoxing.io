@@ -1,14 +1,15 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import { GYM } from '../data/site'
 import { IMAGES } from '../data/assets'
+import { SectionHeader } from './SectionHeader'
 
 export function About() {
   const ref = useScrollAnimation<HTMLElement>()
 
   return (
-    <section id="about" ref={ref} className="animate-on-scroll border-t border-forest/20 bg-matte py-20 sm:py-28">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-sm lg:aspect-[3/4]">
+    <section id="about" ref={ref} className="section-screen animate-on-scroll border-t border-forest/20 bg-matte">
+      <div className="mx-auto grid h-full max-h-full w-full max-w-7xl flex-1 items-center gap-6 px-4 sm:px-6 lg:grid-cols-2 lg:gap-10 lg:px-8">
+        <div className="relative max-h-[42vh] overflow-hidden rounded-sm lg:max-h-none lg:min-h-0 lg:flex-1">
           <img
             src={IMAGES.exterior}
             alt="Woodside Boxing Academy building exterior in Flushing, Queens"
@@ -16,51 +17,32 @@ export function About() {
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-forest-dark/70 to-transparent" />
-          <div className="absolute bottom-6 left-6 border-l-4 border-forest-light pl-4">
-            <p className="font-display text-4xl font-bold text-white">Founded {GYM.founded}</p>
-            <p className="text-sm tracking-widest text-gold uppercase">Flushing, New York</p>
+          <div className="absolute bottom-4 left-4 border-l-4 border-forest-light pl-3">
+            <p className="font-display text-2xl font-bold text-white sm:text-3xl">Founded {GYM.founded}</p>
+            <p className="text-xs tracking-widest text-gold uppercase">Flushing, New York</p>
           </div>
         </div>
 
-        <div>
-          <p className="mb-2 font-display text-sm tracking-[0.25em] text-gold uppercase">About Us</p>
-          <h2 className="font-display text-4xl font-bold tracking-tight text-white uppercase sm:text-5xl">
-            Built on Discipline
-          </h2>
-          <div className="mt-2 h-1 w-16 bg-forest-light" />
+        <div className="min-h-0 lg:overflow-hidden">
+          <SectionHeader
+            label="About Us"
+            title="Built on Discipline"
+            description="A no-nonsense Queens academy where hard work and respect are the cornerstones of every session."
+          />
 
-          <p className="mt-6 text-lg leading-relaxed text-white/75">
-            Woodside Boxing Academy is a no-nonsense, results-driven gym dedicated to the art and discipline of boxing.
-            We are not a luxury fitness brand — we are a real Queens academy where hard work and respect are the
-            cornerstones of every session.
-          </p>
-          <p className="mt-4 leading-relaxed text-white/65">
-            If you want to train, we want to teach you. Our approach emphasizes authentic boxing fundamentals in a safe,
-            structured environment — building confidence, leadership, and mental fortitude alongside physical skill.
-          </p>
-
-          <ul className="mt-8 space-y-4">
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
             {[
-              'Authentic boxing fundamentals — stance, footwork, defense',
-              'Safe and disciplined training environment for all levels',
-              'Confidence and leadership development through the sport',
-              'Community atmosphere — fighters supporting fighters',
+              'Authentic boxing fundamentals',
+              'Safe, disciplined environment',
+              'Confidence through the sport',
+              'Fighters supporting fighters',
             ].map((item) => (
-              <li key={item} className="flex gap-3 text-white/80">
+              <li key={item} className="flex gap-2 text-sm text-white/75">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-forest-light" />
                 {item}
               </li>
             ))}
           </ul>
-
-          <a
-            href={GYM.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-block text-sm font-medium text-gold transition-colors hover:text-white"
-          >
-            Visit woodsideboxingacademy.com →
-          </a>
         </div>
       </div>
     </section>
