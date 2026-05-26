@@ -22,7 +22,7 @@ export function Training() {
         />
 
         <div className="mt-4 grid gap-3 lg:grid-cols-3">
-          <figure className="group relative aspect-[16/10] max-h-36 overflow-hidden rounded-sm sm:max-h-40 lg:col-span-2 lg:max-h-44">
+          <figure className="group relative h-44 w-full overflow-hidden rounded-sm sm:h-48 lg:col-span-2 lg:h-52">
             <img
               src={IMAGES.sparring}
               alt="Woodside Boxing Academy fighters sparring in competition"
@@ -40,7 +40,7 @@ export function Training() {
             </figcaption>
           </figure>
 
-          <figure className="group relative hidden aspect-[4/3] max-h-36 overflow-hidden rounded-sm sm:max-h-40 lg:block lg:max-h-44">
+          <figure className="group relative hidden h-44 w-full overflow-hidden rounded-sm sm:h-48 lg:block lg:h-52">
             <img
               src={IMAGES.exterior}
               alt="Woodside Boxing Academy gym entrance"
