@@ -12,8 +12,8 @@ export function Training() {
   const ref = useScrollAnimation<HTMLElement>()
 
   return (
-    <section id="training" ref={ref} className="section-screen animate-on-scroll border-t border-forest/20 bg-matte">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="training" ref={ref} className="animate-on-scroll border-t border-forest/20 bg-matte py-16 sm:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           centered
           label="The Gym"
@@ -21,9 +21,9 @@ export function Training() {
           description="Heavy bags, rings, and a team that holds you accountable."
         />
 
-        <div className="mt-6 grid gap-4 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 lg:grid-cols-3">
           <figure className="group relative overflow-hidden rounded-sm lg:col-span-2">
-            <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[340px]">
+            <div className="relative aspect-[16/10] w-full lg:aspect-auto lg:h-[300px]">
               <img
                 src={IMAGES.sparring}
                 alt="Woodside Boxing Academy fighters sparring in competition"
@@ -43,7 +43,7 @@ export function Training() {
           </figure>
 
           <figure className="group relative overflow-hidden rounded-sm">
-            <div className="relative aspect-[4/5] lg:aspect-auto lg:min-h-[340px]">
+            <div className="relative aspect-[4/5] w-full lg:aspect-auto lg:h-[300px]">
               <img
                 src={IMAGES.exterior}
                 alt="Woodside Boxing Academy gym entrance"
