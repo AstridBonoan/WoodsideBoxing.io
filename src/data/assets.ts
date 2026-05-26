@@ -7,7 +7,7 @@ export const IMAGES = {
   introToBoxing: `${base}images/intro-to-boxing.jpg`,
   membership: {
     logo: `${base}images/logo.png`,
-    sparring: `${base}images/sparring.jpg`,
+    sparring: `${base}images/amateur-fighter.jpg`,
     intro: `${base}images/intro-to-boxing.jpg`,
   },
   coaches: {
