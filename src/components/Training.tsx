@@ -21,48 +21,54 @@ export function Training() {
           description="Heavy bags, rings, and a team that holds you accountable."
         />
 
-        <div className="mt-4 grid gap-3 lg:grid-cols-3">
-          <figure className="group relative h-44 w-full overflow-hidden rounded-sm sm:h-48 lg:col-span-2 lg:h-52">
-            <img
-              src={IMAGES.sparring}
-              alt="Woodside Boxing Academy fighters sparring in competition"
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/30 to-transparent" />
-            <figcaption className="absolute right-0 bottom-0 left-0 p-4">
-              <h3 className="font-display text-lg font-semibold tracking-wide text-white uppercase">
-                Sparring & Competition
-              </h3>
-              <p className="mt-0.5 text-xs text-white/70">
-                Controlled rounds and USA Boxing–sanctioned matchups under experienced coaches.
-              </p>
-            </figcaption>
+        <div className="mt-6 grid gap-4 lg:grid-cols-3">
+          <figure className="group relative overflow-hidden rounded-sm lg:col-span-2">
+            <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[340px]">
+              <img
+                src={IMAGES.sparring}
+                alt="Woodside Boxing Academy fighters sparring in competition"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/30 to-transparent" />
+              <figcaption className="absolute right-0 bottom-0 left-0 p-6">
+                <h3 className="font-display text-2xl font-semibold tracking-wide text-white uppercase">
+                  Sparring & Competition
+                </h3>
+                <p className="mt-1 text-sm text-white/70">
+                  Controlled rounds and USA Boxing–sanctioned matchups under experienced coaches.
+                </p>
+              </figcaption>
+            </div>
           </figure>
 
-          <figure className="group relative hidden h-44 w-full overflow-hidden rounded-sm sm:h-48 lg:block lg:h-52">
-            <img
-              src={IMAGES.exterior}
-              alt="Woodside Boxing Academy gym entrance"
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/30 to-transparent" />
-            <figcaption className="absolute right-0 bottom-0 left-0 p-4">
-              <h3 className="font-display text-base font-semibold tracking-wide text-white uppercase">Team Atmosphere</h3>
-              <p className="mt-0.5 text-xs text-white/70">Our home in Flushing — no shortcuts.</p>
-            </figcaption>
+          <figure className="group relative overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/5] lg:aspect-auto lg:min-h-[340px]">
+              <img
+                src={IMAGES.exterior}
+                alt="Woodside Boxing Academy gym entrance"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/30 to-transparent" />
+              <figcaption className="absolute right-0 bottom-0 left-0 p-6">
+                <h3 className="font-display text-xl font-semibold tracking-wide text-white uppercase">
+                  Team Atmosphere
+                </h3>
+                <p className="mt-1 text-sm text-white/70">Our home in Flushing — no shortcuts.</p>
+              </figcaption>
+            </div>
           </figure>
         </div>
 
-        <div className="mt-3 grid shrink-0 gap-2 sm:grid-cols-3">
+        <div className="mt-4 grid gap-4 sm:grid-cols-3">
           {TRAINING_FOCUS.map((item) => (
             <div
               key={item.title}
-              className="rounded-sm border border-forest/30 bg-forest-dark/50 px-3 py-2 transition-colors hover:border-forest-light/50"
+              className="rounded-sm border border-forest/30 bg-forest-dark/50 p-6 transition-colors hover:border-forest-light/50 hover:bg-forest/20"
             >
-              <h3 className="font-display text-sm font-semibold tracking-wide text-white uppercase">{item.title}</h3>
-              <p className="text-xs text-white/55">{item.caption}</p>
+              <h3 className="font-display text-lg font-semibold tracking-wide text-white uppercase">{item.title}</h3>
+              <p className="mt-2 text-sm text-white/60">{item.caption}</p>
             </div>
           ))}
         </div>
