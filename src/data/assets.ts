@@ -16,6 +16,6 @@ export const IMAGES = {
     'josh-bungalso': `${base}images/coaches/josh-bungalso.png`,
     edgar: `${base}images/coaches/edgar.png`,
     'frank-castillo': `${base}images/coaches/frank-castillo.png`,
-    'abel-gonzalez': `${base}images/coaches/abel-gonzalez.jpg`,
+    'abel-gonzalez': `${base}images/coaches/abel-gonzalez.png`,
   },
 } as const
