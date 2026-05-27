@@ -30,15 +30,11 @@ export function Contact() {
               </div>
               <div>
                 <h3 className="font-display text-sm tracking-wider text-gold uppercase">Phone</h3>
-                <a href={GYM.phoneHref} className="mt-1 block text-lg text-white/85 transition-colors hover:text-gold">
-                  {GYM.phone}
-                </a>
+                <p className="mt-1 text-lg text-white/85">{GYM.phone}</p>
               </div>
               <div>
                 <h3 className="font-display text-sm tracking-wider text-gold uppercase">Email</h3>
-                <a href={GYM.emailHref} className="mt-1 block text-white/85 transition-colors hover:text-gold">
-                  {GYM.email}
-                </a>
+                <p className="mt-1 text-white/85">{GYM.email}</p>
               </div>
               <div>
                 <h3 className="font-display text-sm tracking-wider text-gold uppercase">Gym Hours</h3>
