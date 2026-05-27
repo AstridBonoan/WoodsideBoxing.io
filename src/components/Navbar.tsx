@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useCart } from '../context/CartContext'
 import { NAV_ACTIONS, NAV_LINKS } from '../data/site'
 import { Logo } from './Logo'
 
@@ -28,6 +29,7 @@ function CartIcon() {
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
+  const { count: cartCount } = useCart()
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
@@ -66,13 +68,13 @@ export function Navbar() {
           </a>
           <a
             href={NAV_ACTIONS.cart.href}
-            aria-label={`${NAV_ACTIONS.cart.label} (${NAV_ACTIONS.cart.count} items)`}
+            aria-label={`${NAV_ACTIONS.cart.label} (${cartCount} items)`}
             className="relative flex h-10 w-10 items-center justify-center rounded-sm text-white/85 transition-colors hover:bg-white/10 hover:text-gold"
           >
             <CartIcon />
-            {NAV_ACTIONS.cart.count > 0 && (
+            {cartCount > 0 && (
               <span className="absolute -top-0.5 -right-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-[10px] font-bold text-charcoal">
-                {NAV_ACTIONS.cart.count}
+                {cartCount}
               </span>
             )}
           </a>
@@ -132,15 +134,15 @@ export function Navbar() {
               </a>
               <a
                 href={NAV_ACTIONS.cart.href}
-                aria-label={`${NAV_ACTIONS.cart.label} (${NAV_ACTIONS.cart.count} items)`}
+                aria-label={`${NAV_ACTIONS.cart.label} (${cartCount} items)`}
                 className="relative flex items-center gap-2 text-white/90"
                 onClick={() => setOpen(false)}
               >
                 <CartIcon />
                 <span>{NAV_ACTIONS.cart.label}</span>
-                {NAV_ACTIONS.cart.count > 0 && (
+                {cartCount > 0 && (
                   <span className="rounded-full bg-gold px-1.5 py-0.5 text-xs font-bold text-charcoal">
-                    {NAV_ACTIONS.cart.count}
+                    {cartCount}
                   </span>
                 )}
               </a>

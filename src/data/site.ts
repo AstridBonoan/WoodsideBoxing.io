@@ -27,7 +27,7 @@ export const NAV_LINKS = [
 
 export const NAV_ACTIONS = {
   login: { href: '#login', label: 'Login' },
-  cart: { href: '#cart', label: 'Cart', count: 0 },
+  cart: { href: '#cart', label: 'Cart' },
 } as const
 
 export const COACHES = [

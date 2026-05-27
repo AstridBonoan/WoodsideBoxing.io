@@ -8,11 +8,14 @@ import { Community } from './components/Community'
 import { Schedule } from './components/Schedule'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
+import { Merchandise } from './components/Merchandise'
+import { CartPage } from './components/CartPage'
+import { CartProvider } from './context/CartContext'
+import { useHashPage } from './hooks/useHashPage'
 
-function App() {
+function HomePage() {
   return (
     <>
-      <Navbar />
       <main>
         <Hero />
         <About />
@@ -25,6 +28,27 @@ function App() {
       </main>
       <Footer />
     </>
+  )
+}
+
+function AppContent() {
+  const page = useHashPage()
+
+  return (
+    <>
+      <Navbar />
+      {page === 'merchandise' && <Merchandise />}
+      {page === 'cart' && <CartPage />}
+      {page === 'home' && <HomePage />}
+    </>
+  )
+}
+
+function App() {
+  return (
+    <CartProvider>
+      <AppContent />
+    </CartProvider>
   )
 }
 
