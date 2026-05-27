@@ -1,19 +1,21 @@
 import { useEffect, useState } from 'react'
 
-export type AppPage = 'home' | 'merchandise' | 'cart'
+export type AppPage = 'home' | 'merchandise' | 'cart' | 'signin' | 'signup'
 
-const SHOP_HASHES = new Set(['merchandise', 'cart'])
+const ROUTE_HASHES = new Set(['merchandise', 'cart', 'signin', 'signup', 'login'])
 
 function getPageFromHash(): AppPage {
   const hash = window.location.hash.replace('#', '')
   if (hash === 'merchandise') return 'merchandise'
   if (hash === 'cart') return 'cart'
+  if (hash === 'signin' || hash === 'login') return 'signin'
+  if (hash === 'signup') return 'signup'
   return 'home'
 }
 
 function getSectionHash(): string | null {
   const hash = window.location.hash.replace('#', '')
-  if (!hash || SHOP_HASHES.has(hash)) return null
+  if (!hash || ROUTE_HASHES.has(hash)) return null
   return hash
 }
 

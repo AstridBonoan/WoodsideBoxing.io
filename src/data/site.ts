@@ -26,7 +26,8 @@ export const NAV_LINKS = [
 ] as const
 
 export const NAV_ACTIONS = {
-  login: { href: '#login', label: 'Login' },
+  login: { href: '#signin', label: 'Sign In' },
+  signup: { href: '#signup', label: 'Sign Up' },
   cart: { href: '#cart', label: 'Cart' },
 } as const
 

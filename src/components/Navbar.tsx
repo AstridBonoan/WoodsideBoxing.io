@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useCart } from '../context/CartContext'
 import { NAV_ACTIONS, NAV_LINKS } from '../data/site'
 import { Logo } from './Logo'
+import { LoginPopover } from './LoginPopover'
 
 function UserIcon() {
   return (
@@ -59,13 +60,7 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href={NAV_ACTIONS.login.href}
-            aria-label={NAV_ACTIONS.login.label}
-            className="flex h-10 w-10 items-center justify-center rounded-sm text-white/85 transition-colors hover:bg-white/10 hover:text-gold"
-          >
-            <UserIcon />
-          </a>
+          <LoginPopover />
           <a
             href={NAV_ACTIONS.cart.href}
             aria-label={`${NAV_ACTIONS.cart.label} (${cartCount} items)`}
@@ -122,15 +117,21 @@ export function Navbar() {
                 </a>
               </li>
             ))}
-            <li className="flex items-center gap-4 border-t border-white/10 pt-4">
+            <li className="flex flex-col gap-3 border-t border-white/10 pt-4">
               <a
-                href={NAV_ACTIONS.login.href}
-                aria-label={NAV_ACTIONS.login.label}
+                href="#signin"
                 className="flex items-center gap-2 text-white/90"
                 onClick={() => setOpen(false)}
               >
                 <UserIcon />
-                <span>{NAV_ACTIONS.login.label}</span>
+                <span>Sign In</span>
+              </a>
+              <a
+                href="#signup"
+                className="pl-7 text-sm text-white/70"
+                onClick={() => setOpen(false)}
+              >
+                Sign Up
               </a>
               <a
                 href={NAV_ACTIONS.cart.href}

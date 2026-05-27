@@ -10,6 +10,8 @@ import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 import { Merchandise } from './components/Merchandise'
 import { CartPage } from './components/CartPage'
+import { SignInPage } from './components/SignInPage'
+import { SignUpPage } from './components/SignUpPage'
 import { CartProvider } from './context/CartContext'
 import { useHashPage } from './hooks/useHashPage'
 
@@ -39,6 +41,8 @@ function AppContent() {
       <Navbar />
       {page === 'merchandise' && <Merchandise />}
       {page === 'cart' && <CartPage />}
+      {page === 'signin' && <SignInPage />}
+      {page === 'signup' && <SignUpPage />}
       {page === 'home' && <HomePage />}
     </>
   )
