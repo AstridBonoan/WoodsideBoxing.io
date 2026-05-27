@@ -1,4 +1,4 @@
-import { AuthField, AuthSubmit, AuthSwitchLink } from './AuthForm'
+import { AuthSwitchLink } from './AuthForm'
 
 function UserIcon() {
   return (
@@ -28,17 +28,12 @@ export function LoginPopover() {
         <div className="rounded-sm border border-white/10 bg-forest-dark p-5 shadow-xl">
           <p className="font-display text-sm font-semibold tracking-wide text-white uppercase">Sign In</p>
 
-          <form
-            className="mt-4 space-y-3"
-            onSubmit={(event) => {
-              event.preventDefault()
-              window.location.hash = 'signin'
-            }}
+          <a
+            href="#signin"
+            className="mt-4 block w-full rounded-sm bg-forest py-3 text-center text-sm font-semibold tracking-wide text-white transition-colors hover:bg-forest-light"
           >
-            <AuthField id="popover-email" label="Email" type="email" autoComplete="email" />
-            <AuthField id="popover-password" label="Password" type="password" autoComplete="current-password" />
-            <AuthSubmit label="Sign In" />
-          </form>
+            Sign In
+          </a>
 
           <AuthSwitchLink prompt="Don't have an account?" href="#signup" label="Sign Up" />
         </div>
