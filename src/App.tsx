@@ -14,6 +14,7 @@ import { SignInPage } from './components/SignInPage'
 import { SignUpPage } from './components/SignUpPage'
 import { CartProvider } from './context/CartContext'
 import { useHashPage } from './hooks/useHashPage'
+import { Watermark } from './components/Watermark'
 
 function HomePage() {
   return (
@@ -44,6 +45,7 @@ function AppContent() {
       {page === 'signin' && <SignInPage />}
       {page === 'signup' && <SignUpPage />}
       {page === 'home' && <HomePage />}
+      <Watermark />
     </>
   )
 }
